@@ -1,6 +1,6 @@
 
 <h1 align="center"> 
-  <strong>Example of hexagonal architecture in Spring Boot</strong>
+  <strong>Example of Spring Security JWT in Spring Boot</strong>
 </h1>
 <br>
 
