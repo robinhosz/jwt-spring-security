@@ -5,6 +5,8 @@ import io.github.robinhosz.security.entity.ProductEntity;
 import io.github.robinhosz.security.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProductService {
 
@@ -26,5 +28,15 @@ public class ProductService {
 
         return productRepository.save(productEntity);
 
+    }
+
+    public List<ProductDTO> findAll() {
+        List<ProductEntity> products = productRepository.findAll();
+        return products.stream().map(x -> ProductDTO.builder()
+                .description(x.getDescription())
+                .price(x.getPrice())
+                .name(x.getName())
+                .quantity(x.getQuantity())
+                .build()).toList();
     }
 }

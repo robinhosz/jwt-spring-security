@@ -1,5 +1,6 @@
 package io.github.robinhosz.security.entity;
 
+import io.github.robinhosz.security.dto.ProductDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,4 +24,5 @@ public class ProductEntity {
     private Integer quantity;
 
     private String description;
+
 }
